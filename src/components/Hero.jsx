@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-
+import { useTranslation, Trans } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="hero">
             <div className="neural-animation">
@@ -31,21 +32,23 @@ const Hero = () => {
           {/* Left Column - Strategic Messaging */}
           <div className="leadership-content">
             <motion.h1 className="gradient-headline">
-              <span className="main-headline">
-                Automation That Works While You Sleep
-              </span>
+                          <span className="main-headline">
+              {t('hero.headline')}
+                            </span>
               <span className="slogan">
-                We take care of the work you hate
-              </span>
+              {t('hero.slogan')}              </span>
             </motion.h1>
 
             <motion.p className="value-proposition">
+            <Trans i18nKey="hero.valueProposition">
               Our AI bots handle 
               <span className="highlight"> customer service</span>, 
               <span className="highlight"> sales</span>, and 
               <span className="highlight"> operations</span> - 
               so you can focus on what really matters
+              </Trans>
             </motion.p>
+            
 
             <div className="cta-group">
               <motion.button 
@@ -53,11 +56,10 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                See Bots in Action
-              </motion.button>
+            {t('hero.ctaPrimary')}
+                          </motion.button>
               <button className="secondary-cta">
-                Get Free Automation Audit →
-              </button>
+              {t('hero.ctaSecondary')}              </button>
             </div>
           </div>
 
@@ -66,9 +68,9 @@ const Hero = () => {
             <div className="metrics-grid">
               <div className="metric-card">
                 <div className="metric-value">24/7</div>
-                <div className="metric-label">Automated Support</div>
-                <div className="metric-comparison">No downtime, ever</div>
-              </div>
+                <div className="metric-label">{t('hero.metrics.support')}</div>
+                <div className="metric-comparison">{t('hero.metrics.comparison')}</div>
+                              </div>
               
               <div className="metric-card">
                 <div className="metric-value">95%</div>

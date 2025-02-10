@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "headline": "Automation That Works While You Sleep",
+    "slogan": "We take care of the work you hate",
+    "valueProposition": "Our AI bots handle <1>customer service</1>, <3>sales</3>, and <5>operations</5> - so you can focus on what really matters",
+    "ctaPrimary": "See Bots in Action",
+    "ctaSecondary": "Get Free Automation Audit →",
+    "metrics": {
+      "support": "Automated Support",
+      "response": "Faster Response Times",
+      "comparison": "vs human teams"
+    }
+  },
+  "services": {
+    "title": "Enterprise-Grade Automation Solutions",
+    "socialMedia": {
+      "title": "Social Media Autopilot",
+      "description": "Full-cycle social media management AI",
+      "features": [
+        "Content Creation & Scheduling",
+        "Audience Engagement AI",
+        "Performance Analytics",
+        "Crisis Management"
+      ]
+    },
+        "demoButton": "See Live Demo",
+    "workflow": {
+      "title": "Workflow Automator PRO",
+      "description": "End-to-end process automation engine",
+      "features": [
+        "No-code Integration",
+        "Cross-platform Automation",
+        "Real-time Monitoring",
+        "Self-optimizing Workflows"
+      ]
+    },
+    "accounting": {
+      "title": "Quantum Ledger AI",
+      "description": "Autonomous accounting & bookkeeping",
+      "features": [
+        "Real-time Reconciliation",
+        "Tax Compliance AI",
+        "Expense Forecasting",
+        "Fraud Detection"
+      ]
+    }
+  },
+  "showcase": {
+    "title": "See Our Bots in Action",
+    "videos": [
+      {
+        "title": "Social Media Automation",
+        "description": "See how our bots manage multiple platforms"
+      },
+      {
+        "title": "Workflow Automation",
+        "description": "End-to-end process automation demo"
+      },
+      {
+        "title": "AI Accounting",
+        "description": "Real-time bookkeeping automation"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Build Your AI Solution",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "submit": "Send Message",
+    "info": {
+      "title": "Contact Information",
+      "headquarters": "Headquarters",
+      "address": "123 AI Boulevard<br />Silicon Valley, CA 94025",
+      "phone": "Phone",
+      "phoneNumber": "+1 (555) 123-4567",
+      "email": "Email",
+      "emailAddress": "contact@neuroai.com"   
+     },
+     "social": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "github": "GitHub"
+    }
+  },
+  "footer": {
+    "links": ["Terms", "Privacy", "Contact"],
+    "copyright": "© {{year}} All rights reserved"
+  }
+}

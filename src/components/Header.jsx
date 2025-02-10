@@ -1,19 +1,16 @@
-// Header.js
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { FaTwitter, FaLinkedinIn, FaGithub, FaDiscord } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeNav, setActiveNav] = useState('');
+  const { t, i18n } = useTranslation(); // Destructure i18n and t
 
-  const navItems = [
-    { name: 'Home', id: 'hero' },
-    { name: 'Services', id: 'services' },
-    { name: 'Showcase', id: 'showcase' },
-    { name: 'Contact', id: 'contact' },
-  ];
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); // Use i18n.changeLanguage
+  };
 
   return (
     <header className="header">
@@ -28,28 +25,6 @@ const Header = () => {
           <div className="logo-glow"></div>
         </motion.div>
 
-        <nav className="desktop-nav">
-          {navItems.map((item) => (
-            <motion.div 
-              key={item.id}
-              className="nav-item"
-              onHoverStart={() => setActiveNav(item.id)}
-              onHoverEnd={() => setActiveNav('')}
-            >
-              <a href={`#${item.id}`} className="nav-link">
-                {item.name}
-                {activeNav === item.id && (
-                  <motion.div 
-                    className="nav-indicator"
-                    layoutId="nav-indicator"
-                    transition={{ type: 'spring', bounce: 0.25 }}
-                  />
-                )}
-              </a>
-            </motion.div>
-          ))}
-        </nav>
-
         <div className="header-socials">
           <a href="#" className="social-icon"><FaTwitter /></a>
           <a href="#" className="social-icon"><FaLinkedinIn /></a>
@@ -57,14 +32,21 @@ const Header = () => {
           <a href="#" className="social-icon"><FaDiscord /></a>
         </div>
 
-        <motion.button 
-          className="cta-button"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Get Started
-          <div className="button-glow"></div>
-        </motion.button>
+        <div className="language-switcher">
+          <button 
+            onClick={() => changeLanguage('en')}
+            className={i18n.language === 'en' ? 'active' : ''}
+          >
+            EN
+          </button>
+          <span className="divider">|</span>
+          <button 
+            onClick={() => changeLanguage('ru')}
+            className={i18n.language === 'ru' ? 'active' : ''}
+          >
+            RU
+          </button>
+        </div>
 
         <button 
           className="mobile-toggle"
@@ -78,16 +60,6 @@ const Header = () => {
           initial={false}
           animate={{ height: isMenuOpen ? 'auto' : 0 }}
         >
-          {navItems.map((item) => (
-            <a 
-              key={item.id} 
-              href={`#${item.id}`}
-              className="mobile-nav-item"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.name}
-            </a>
-          ))}
           <div className="mobile-socials">
             <a href="#" className="social-icon"><FaTwitter /></a>
             <a href="#" className="social-icon"><FaLinkedinIn /></a>

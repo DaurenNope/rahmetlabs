@@ -1,5 +1,5 @@
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
-
+import { useTranslation } from 'react-i18next';
 
 const ServiceCard = ({ title, description, features, demoComponent }) => {
   const mouseX = useMotionValue(0);
@@ -15,6 +15,8 @@ const ServiceCard = ({ title, description, features, demoComponent }) => {
 
   const background = useMotionTemplate`radial-gradient(${radius}px circle at ${mouseX}px ${mouseY}px, 
     rgba(99, 102, 241, 0.4), transparent 80%)`;
+
+  const { t } = useTranslation();
 
   return (
     <motion.div 
@@ -43,7 +45,7 @@ const ServiceCard = ({ title, description, features, demoComponent }) => {
           </div>
           
           <button className="cta">
-            See Live Demo
+            {t('services.demoButton')}
             <div className="cta-pulse"></div>
           </button>
         </div>
@@ -53,57 +55,40 @@ const ServiceCard = ({ title, description, features, demoComponent }) => {
 };
 
 const Services = () => {
-  const services = [
-    {
-      title: "Social Media Autopilot",
-      description: "Full-cycle social media management AI",
-      features: [
-        "Content Creation & Scheduling",
-        "Audience Engagement AI",
-        "Performance Analytics",
-        "Crisis Management"
-      ],
-      demoComponent: (
-        <div className="social-demo">
-          <div className="platform-icon">📱</div>
-          <div className="engagement-graph"></div>
-          <div className="post-calendar"></div>
-        </div>
-      )
-    },
-    {
-      title: "Workflow Automator PRO",
-      description: "End-to-end process automation engine",
-      features: [
-        "No-code Integration",
-        "Cross-platform Automation",
-        "Real-time Monitoring",
-        "Self-optimizing Workflows"
-      ],
-      demoComponent: (
-        <div className="workflow-demo">
-          <div className="node-connection"></div>
-          <div className="process-visualizer"></div>
-        </div>
-      )
-    },
-    {
-      title: "Quantum Ledger AI",
-      description: "Autonomous accounting & bookkeeping",
-      features: [
-        "Real-time Reconciliation",
-        "Tax Compliance AI",
-        "Expense Forecasting",
-        "Fraud Detection"
-      ],
-      demoComponent: (
-        <div className="accounting-demo">
-          <div className="ledger-animation"></div>
-          <div className="currency-flow"></div>
-        </div>
-      )
-    }
+  const { t } = useTranslation();
+
+  // Get translated content
+  const translatedServices = [
+    t('services.socialMedia', { returnObjects: true }),
+    t('services.workflow', { returnObjects: true }),
+    t('services.accounting', { returnObjects: true })
   ];
+
+  // Static demo components
+  const demoComponents = [
+    (
+      <div className="social-demo">
+        <div className="platform-icon">📱</div>
+        <div className="engagement-graph"></div>
+      </div>
+    ),
+    (
+      <div className="workflow-demo">
+        <div className="node-connection"></div>
+      </div>
+    ),
+    (
+      <div className="accounting-demo">
+        <div className="ledger-animation"></div>
+      </div>
+    )
+  ];
+
+  // Combine translated content with demo components
+  const services = translatedServices.map((service, index) => ({
+    ...service,
+    demoComponent: demoComponents[index]
+  }));
 
   return (
     <section className="services" id="services">
@@ -113,7 +98,7 @@ const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          Enterprise-Grade Automation Solutions
+          {t('services.title')}
         </motion.h2>
 
         <div className="services-grid">
@@ -128,4 +113,5 @@ const Services = () => {
     </section>
   );
 };
+
 export default Services;

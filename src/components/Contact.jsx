@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,7 +23,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          Let's Build Your AI Solution
+          {t('contact.title')}
         </motion.h2>
 
         <div className="contact-grid">
@@ -33,7 +35,7 @@ const Contact = () => {
             onSubmit={handleSubmit}
           >
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">{t('contact.labels.name')}</label>
               <input
                 type="text"
                 id="name"
@@ -44,7 +46,7 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t('contact.labels.email')}</label>
               <input
                 type="email"
                 id="email"
@@ -55,7 +57,7 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">{t('contact.labels.message')}</label>
               <textarea
                 id="message"
                 value={formData.message}
@@ -66,7 +68,7 @@ const Contact = () => {
             </div>
 
             <button type="submit" className="submit-button">
-              Send Message
+              {t('contact.submit')}
               <div className="button-glow"></div>
             </button>
           </motion.form>
@@ -78,15 +80,14 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
           >
             <div className="info-card">
-              <h3>Contact Information</h3>
+              <h3>{t('contact.info.title')}</h3>
               
               <div className="info-item">
                 <div className="info-icon">📍</div>
                 <div className="info-content">
-                  <div className="info-label">Headquarters</div>
+                  <div className="info-label">{t('contact.info.headquarters')}</div>
                   <div className="info-value">
-                    123 AI Boulevard<br />
-                    Silicon Valley, CA 94025
+                    {t('contact.info.address')}
                   </div>
                 </div>
               </div>
@@ -94,9 +95,9 @@ const Contact = () => {
               <div className="info-item">
                 <div className="info-icon">📞</div>
                 <div className="info-content">
-                  <div className="info-label">Phone</div>
+                  <div className="info-label">{t('contact.info.phone')}</div>
                   <div className="info-value">
-                    +1 (555) 123-4567
+                    {t('contact.info.phoneNumber')}
                   </div>
                 </div>
               </div>
@@ -104,18 +105,18 @@ const Contact = () => {
               <div className="info-item">
                 <div className="info-icon">✉️</div>
                 <div className="info-content">
-                  <div className="info-label">Email</div>
+                  <div className="info-label">{t('contact.info.email')}</div>
                   <div className="info-value">
-                    contact@neuroai.com
+                    {t('contact.info.emailAddress')}
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="social-links">
-              <a href="#" className="social-link">LinkedIn</a>
-              <a href="#" className="social-link">Twitter</a>
-              <a href="#" className="social-link">GitHub</a>
+              <a href="#" className="social-link">{t('contact.social.linkedin')}</a>
+              <a href="#" className="social-link">{t('contact.social.twitter')}</a>
+              <a href="#" className="social-link">{t('contact.social.github')}</a>
             </div>
           </motion.div>
         </div>
@@ -123,4 +124,5 @@ const Contact = () => {
     </section>
   );
 };
+
 export default Contact;

@@ -1,24 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const VideoShowcase = () => {
-  const videos = [
-    {
-      title: "Social Media Automation",
-      description: "See how our bots manage multiple platforms",
-      placeholder: "/social-placeholder.jpg"
-    },
-    {
-      title: "Workflow Automation",
-      description: "End-to-end process automation demo",
-      placeholder: "/workflow-placeholder.jpg"
-    },
-    {
-      title: "AI Accounting",
-      description: "Real-time bookkeeping automation",
-      placeholder: "/accounting-placeholder.jpg"
-    }
-  ];
+  const { t } = useTranslation();
+
+  // Get translated videos
+  const videos = t('showcase.videos', { returnObjects: true });
 
   return (
     <section className="video-showcase" id="showcase">
@@ -28,7 +16,7 @@ const VideoShowcase = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          See Our Bots in Action
+          {t('showcase.title')}
         </motion.h2>
 
         <div className="video-grid">
@@ -62,4 +50,5 @@ const VideoShowcase = () => {
     </section>
   );
 };
+
 export default VideoShowcase;
