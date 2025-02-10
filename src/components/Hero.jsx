@@ -74,8 +74,8 @@ const Hero = () => {
               
               <div className="metric-card">
                 <div className="metric-value">95%</div>
-                <div className="metric-label">Faster Response Times</div>
-                <div className="metric-comparison">vs human teams</div>
+                <div className="metric-label">{t('hero.metrics.response')}</div>
+                <div className="metric-comparison">{t('hero.metrics.comparison')}</div>
               </div>
 
               <div className="client-logos">
