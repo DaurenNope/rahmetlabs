@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-        "typescript": "^4.9.5",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@use-gesture/react": "^10.3.1",
@@ -18,12 +17,13 @@
     "react-icons": "^5.4.0",
     "react-scripts": "^5.0.1",
     "react-tsparticles": "^2.12.2",
-    "tsparticles": "^3.8.1"
+    "tsparticles": "^3.8.1",
+    "typescript": "4.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-      "preinstall": "npx npm-force-resolutions",
+    "preinstall": "npx npm-force-resolutions",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -41,10 +41,14 @@
     ],
     "development": [
       "last 1 chrome version",
-      "last 1 firefox version", 
+      "last 1 firefox version",
       "last 1 safari version"
     ]
   },
   "resolutions": {
-    "typescript": "^4.9.5"
-  }}
+    "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "npm-force-resolutions": "^0.0.10"
+  }
+}
