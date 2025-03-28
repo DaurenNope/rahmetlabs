@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   Box,
@@ -20,6 +19,13 @@ const Hero = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -342,9 +348,8 @@ const Hero = () => {
                     style={{ width: 'auto' }}
                   >
                     <Button
-                      component={RouterLink}
-                      to="/contact"
                       variant="contained"
+                      onClick={() => scrollToSection('contact')}
                       sx={{
                         background: 'linear-gradient(135deg, #00D2FF 0%, #00FFF0 100%)',
                         color: '#000',
@@ -370,9 +375,8 @@ const Hero = () => {
                     style={{ width: 'auto' }}
                   >
                     <Button
-                      component={RouterLink}
-                      to="/projects"
                       variant="outlined"
+                      onClick={() => scrollToSection('services')}
                       endIcon={<ArrowIcon />}
                       sx={{
                         borderColor: 'rgba(0, 210, 255, 0.5)',

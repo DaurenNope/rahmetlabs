@@ -8,6 +8,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
+  Stack,
 } from '@mui/material';
 import {
   WhatsApp as WhatsAppIcon,
@@ -44,6 +45,7 @@ const Contact = () => {
   return (
     <Box
       component="section"
+      id="contact"
       sx={{
         position: 'relative',
         minHeight: '80vh',
@@ -191,13 +193,15 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Link
+              <Box
+                component="a"
                 href={method.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
                   textDecoration: 'none',
                   color: 'inherit',
+                  display: 'block',
                 }}
               >
                 <Stack
@@ -246,7 +250,7 @@ const Contact = () => {
                     {method.name}
                   </Typography>
                 </Stack>
-              </Link>
+              </Box>
             </motion.div>
           ))}
         </Stack>
