@@ -1,92 +1,76 @@
 {
   "hero": {
-    "headline": "Automation That Works While You Sleep",
-    "slogan": "We take care of the work you hate",
-    "valueProposition": "Our AI bots handle <1>customer service</1>, <3>sales</3>, and <5>operations</5> - so you can focus on what really matters",
-    "ctaPrimary": "See Bots in Action",
-    "ctaSecondary": "Get Free Automation Audit →",
-    "metrics": {
-      "support": "Automated Support",
-      "response": "Faster Response Times",
-      "comparison": "vs human teams"
-    }
+    "headline": "AI Solutions for Your Business",
+    "subheadline": "Empowering businesses with cutting-edge AI solutions in Kazakhstan",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Learn More"
   },
   "services": {
-    "title": "Enterprise-Grade Automation Solutions",
-    "socialMedia": {
-      "title": "Social Media Autopilot",
-      "description": "Full-cycle social media management AI",
-      "features": [
-        "Content Creation & Scheduling",
-        "Audience Engagement AI",
-        "Performance Analytics",
-        "Crisis Management"
-      ]
-    },
-        "demoButton": "See Live Demo",
-    "workflow": {
-      "title": "Workflow Automator PRO",
-      "description": "End-to-end process automation engine",
-      "features": [
-        "No-code Integration",
-        "Cross-platform Automation",
-        "Real-time Monitoring",
-        "Self-optimizing Workflows"
-      ]
-    },
-    "accounting": {
-      "title": "Quantum Ledger AI",
-      "description": "Autonomous accounting & bookkeeping",
-      "features": [
-        "Real-time Reconciliation",
-        "Tax Compliance AI",
-        "Expense Forecasting",
-        "Fraud Detection"
-      ]
-    }
+    "title": "Our Services",
+    "subtitle": "Comprehensive AI Solutions",
+    "items": [
+      {
+        "title": "AI Consulting",
+        "description": "Strategic guidance for implementing AI in your business"
+      },
+      {
+        "title": "Custom AI Development",
+        "description": "Tailored AI solutions for your specific needs"
+      },
+      {
+        "title": "AI Integration",
+        "description": "Seamless integration of AI into your existing systems"
+      }
+    ]
   },
-  "showcase": {
-    "title": "See Our Bots in Action",
-    "videos": [
+  "process": {
+    "title": "Our Process",
+    "steps": [
       {
-        "title": "Social Media Automation",
-        "description": "See how our bots manage multiple platforms"
+        "title": "Discovery & Analysis",
+        "description": "Understanding your needs and challenges"
       },
       {
-        "title": "Workflow Automation",
-        "description": "End-to-end process automation demo"
+        "title": "Solution Design",
+        "description": "Creating a tailored AI strategy"
       },
       {
-        "title": "AI Accounting",
-        "description": "Real-time bookkeeping automation"
+        "title": "Implementation",
+        "description": "Bringing the solution to life"
+      },
+      {
+        "title": "Continuous Support",
+        "description": "Ensuring long-term success"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Why Choose Rahmet Labs",
+    "subtitle": "Your Partner in AI Innovation",
+    "stats": {
+      "satisfaction": "95% Client Satisfaction",
+      "efficiency": "2x Efficiency Boost"
+    },
+    "features": [
+      {
+        "title": "Local Expertise",
+        "description": "Deep understanding of Kazakhstan's business landscape"
+      },
+      {
+        "title": "Cutting-edge Technology",
+        "description": "Access to the latest AI advancements"
+      },
+      {
+        "title": "Dedicated Support",
+        "description": "24/7 support in your language"
       }
     ]
   },
   "contact": {
-    "title": "Let's Build Your AI Solution",
-    "labels": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message"
-    },
-    "submit": "Send Message",
-    "info": {
-      "title": "Contact Information",
-      "headquarters": "Headquarters",
-      "address": "123 AI Boulevard<br />Silicon Valley, CA 94025",
-      "phone": "Phone",
-      "phoneNumber": "+1 (555) 123-4567",
-      "email": "Email",
-      "emailAddress": "contact@neuroai.com"   
-     },
-     "social": {
-      "linkedin": "LinkedIn",
-      "twitter": "Twitter",
-      "github": "GitHub"
-    }
+    "title": "Let's Connect",
+    "description": "Ready to transform your business with AI? Reach out through any of these channels."
   },
   "footer": {
-    "links": ["Terms", "Privacy", "Contact"],
-    "copyright": "© {{year}} All rights reserved"
+    "copyright": "© {{year}} Rahmet Labs"
   }
 }

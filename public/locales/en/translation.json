@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "title": "LET'S BUILD SOMETHING COOL",
+    "subtitle": "RAHMET LABS",
+    "description": "We help businesses and individuals work smarter through automation and AI.",
+    "cta": {
+      "talk": "Let's Talk",
+      "work": "See Our Work"
+    }
+  },
+  "services": {
+    "title": "Our Solutions",
+    "description": "Discover how our AI solutions can transform your business operations and drive growth",
+    "items": {
+      "automation": {
+        "title": "Tax Code Assistant",
+        "description": "AI-powered tool for navigating tax regulations",
+        "features": [
+          "Real-time tax code interpretation",
+          "Automated compliance checking",
+          "Multi-language support",
+          "Regular updates with latest regulations"
+        ],
+        "status": "Ready for Testing",
+        "tryNow": "Try Now"
+      },
+      "ai": {
+        "title": "Legal Assistant",
+        "description": "Streamline case research and document analysis",
+        "features": [
+          "Case law analysis",
+          "Document summarization",
+          "Compliance verification",
+          "Legal research automation"
+        ],
+        "status": "In Development"
+      },
+      "development": {
+        "title": "Medical Assistant",
+        "description": "AI solution for healthcare providers",
+        "features": [
+          "Patient data analysis",
+          "Diagnostic support",
+          "Treatment planning",
+          "Clinical documentation"
+        ],
+        "status": "In Development"
+      }
+    }
+  },
+  "process": {
+    "title": "Our Process",
+    "description": "We follow a streamlined process to transform your ideas into powerful automated solutions",
+    "steps": {
+      "discovery": {
+        "title": "Discovery & Analysis",
+        "description": "We analyze your workflow and identify automation opportunities using our expertise in n8n, defy, and AI agents"
+      },
+      "planning": {
+        "title": "Solution Design",
+        "description": "Our team crafts a custom solution combining the perfect mix of automation tools and AI technologies"
+      },
+      "execution": {
+        "title": "Implementation",
+        "description": "We implement and integrate the solution seamlessly into your existing workflow"
+      },
+      "support": {
+        "title": "Continuous Support",
+        "description": "Our team provides ongoing support and optimization to ensure your solution evolves with your needs"
+      }
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Us",
+    "description": "We combine deep technical expertise with industry knowledge to deliver AI solutions that drive real business value. Our commitment to innovation and excellence sets us apart.",
+    "stats": {
+      "satisfaction": "95%",
+      "efficiency": "2x",
+      "clients": "Client Satisfaction",
+      "projects": "Efficiency Boost"
+    },
+    "features": [
+      {
+        "title": "Fast Implementation",
+        "description": "Get your AI solution up and running quickly with our streamlined deployment process"
+      },
+      {
+        "title": "Cutting-Edge Tech",
+        "description": "Access the latest AI technologies and stay ahead of the competition"
+      },
+      {
+        "title": "Enterprise Security",
+        "description": "Bank-grade security measures to protect your sensitive data"
+      },
+      {
+        "title": "Expert Team",
+        "description": "Work with seasoned AI specialists and developers who understand your needs"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "description": "Ready to transform your business with AI? Reach out through any of these channels and we'll get back to you quickly.",
+    "methods": {
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "email": "Email"
+    }
+  }
+} 
